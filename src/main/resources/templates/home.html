@@ -1,0 +1,24 @@
+<html>
+    <body>
+    <pre>
+        $!{value1} #如果不存在强制为空
+
+        colors: $!{colors}
+
+        #foreach($color in $colors)
+            This is color $!{foreach.index}: $color,, $!{foreach.count}
+        #end
+        #foreach($key in $map.keySet())
+            number: $key , value: $map.get($key)
+        #end
+
+        #foreach($kv in $map.entrySet())
+        `   Number: $kv.key , Value: $kv.value
+        #end
+        User: $!{User.name}
+        $!{User.description}
+        $!{User.getDescription()}
+    </pre>
+
+    </body>
+</html>
